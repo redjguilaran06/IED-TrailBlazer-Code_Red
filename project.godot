@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="IED-TrailBlazer-Code_Red"
+run/main_scene="uid://bhao7ywakjwlk"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/vsync/vsync_mode=0
 
 [rendering]
 

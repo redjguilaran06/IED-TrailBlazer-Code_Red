@@ -10,15 +10,19 @@ config_version=5
 
 [application]
 
-config/name="IED-TrailBlazer-Code_Red"
-run/main_scene="uid://bhao7ywakjwlk"
+config/name="TrailBlazer 2.0"
+run/main_scene="uid://diufpov6ev5u4"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
 
 [display]
 
-window/vsync/vsync_mode=0
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/size/window_width_override=360
+window/size/window_height_override=640
+window/stretch/mode="canvas_items"
 
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)

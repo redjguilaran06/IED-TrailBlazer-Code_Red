@@ -10,20 +10,17 @@ config_version=5
 
 [application]
 
-
 config/name="TrailBlazer 2.0"
 run/main_scene="uid://diufpov6ev5u4"
 config/features=PackedStringArray("4.4", "Mobile")
 
 [display]
 
-
 window/size/viewport_width=1080
 window/size/viewport_height=1920
 window/size/window_width_override=360
 window/size/window_height_override=640
 window/stretch/mode="canvas_items"
-
 
 [input]
 
@@ -42,7 +39,6 @@ right_mouse={
 
 2d_physics/layer_1="card_target_selector"
 2d_physics/layer_2="card_drop_layer"
-
 
 [rendering]
 

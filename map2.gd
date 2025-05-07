@@ -18,4 +18,4 @@ func _close():
 		popup_panel.visible = false
 	
 func _fight_pressed():
-	var err = get_tree().change_scene_to_file("res://tab.tscn")
+	var err = get_tree().change_scene_to_file("res://scenes/run/run.tscn")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://diufpov6ev5u4"]
 
-[ext_resource type="Texture2D" uid="uid://d3ykbbim43pr1" path="res://trailblazerLogo.jpg" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://bpb7frn88mlpw" path="res://control.gd" id="1_62e2m"]
+[ext_resource type="Texture2D" uid="uid://d24nykowixrkf" path="res://trailblazerLogo.png" id="2_ee4bf"]
 [ext_resource type="Texture2D" uid="uid://404bb4mhhsf5" path="res://arrow-left-line.png" id="3_qtu10"]
 [ext_resource type="Texture2D" uid="uid://o1q6fsb6qqhh" path="res://eye-line.png" id="4_ee4bf"]
 
@@ -49,9 +49,11 @@ script = ExtResource("1_62e2m")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 1078.0
-offset_bottom = 669.0
-texture = ExtResource("1_0fbet")
+offset_left = -693.0
+offset_top = -15.0
+offset_right = 1767.0
+offset_bottom = 1911.0
+texture = ExtResource("2_ee4bf")
 
 [node name="Username" type="LineEdit" parent="."]
 layout_mode = 1

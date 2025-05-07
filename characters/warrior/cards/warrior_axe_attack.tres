@@ -15,4 +15,3 @@ exhausts = false
 icon = ExtResource("1_mnudp")
 tooltip_text = "[center]Deal [color=\"ff0000\"]%s[/color] damage.[/center]"
 sound = ExtResource("3_fudr5")
-

@@ -8,4 +8,3 @@ point_count = 3
 [node name="CardArc" type="Line2D"]
 width = 4.0
 width_curve = SubResource("Curve_tt5d5")
-

@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://caf6b7eblkkl6"]
 
-[ext_resource type="Texture2D" uid="uid://cgn6f3udq71iv" path="res://664b7786-0dc1-4980-97d1-94ce3302abe4.jpg" id="1_c7s6e"]
-[ext_resource type="Script" uid="uid://brsxoaacy6001" path="res://map.gd" id="1_e0an3"]
-[ext_resource type="Texture2D" uid="uid://s811mb4trrt0" path="res://map-pin-user-fill.png" id="2_wijl4"]
+[ext_resource type="Script" uid="uid://brsxoaacy6001" path="res://map2.gd" id="1_55y45"]
+[ext_resource type="Texture2D" uid="uid://cgn6f3udq71iv" path="res://664b7786-0dc1-4980-97d1-94ce3302abe4.jpg" id="2_nwr2e"]
+[ext_resource type="Texture2D" uid="uid://s811mb4trrt0" path="res://map-pin-user-fill.png" id="3_4f56f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wijl4"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -41,13 +41,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_e0an3")
+script = ExtResource("1_55y45")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1084.0
 offset_bottom = 1913.0
-texture = ExtResource("1_c7s6e")
+texture = ExtResource("2_nwr2e")
 
 [node name="firstUser" type="TextureRect" parent="."]
 layout_mode = 0
@@ -55,7 +55,7 @@ offset_left = 269.0
 offset_top = 1274.0
 offset_right = 393.0
 offset_bottom = 1382.0
-texture = ExtResource("2_wijl4")
+texture = ExtResource("3_4f56f")
 
 [node name="firstUserButton" type="Button" parent="firstUser"]
 layout_mode = 0
@@ -69,7 +69,7 @@ offset_left = 807.0
 offset_top = 798.0
 offset_right = 931.0
 offset_bottom = 906.0
-texture = ExtResource("2_wijl4")
+texture = ExtResource("3_4f56f")
 
 [node name="secondUserButton" type="Button" parent="secondUser"]
 layout_mode = 0
@@ -85,7 +85,7 @@ offset_left = 420.0
 offset_top = 297.0
 offset_right = 544.0
 offset_bottom = 405.0
-texture = ExtResource("2_wijl4")
+texture = ExtResource("3_4f56f")
 
 [node name="thirdUserButton" type="Button" parent="thirdUser"]
 layout_mode = 0
@@ -128,7 +128,7 @@ offset_left = 393.0
 offset_top = 612.0
 offset_right = 517.0
 offset_bottom = 720.0
-texture = ExtResource("2_wijl4")
+texture = ExtResource("3_4f56f")
 
 [node name="fourthUserButtin" type="Button" parent="fourthUser"]
 layout_mode = 0

@@ -11,7 +11,7 @@ enum Type {WIN, LOSE}
 
 
 func _ready() -> void:
-	continue_button.pressed.connect(func(): Events.battle_won.emit())
+	continue_button.pressed.connect(func():get_tree().change_scene_to_file("res://map2.tscn"))
 	main_menu_button.pressed.connect(get_tree().change_scene_to_file.bind(MAIN_MENU))
 	Events.battle_over_screen_requested.connect(show_screen)
 

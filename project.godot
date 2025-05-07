@@ -35,6 +35,7 @@ window/size/viewport_height=1920
 window/size/window_width_override=360
 window/size/window_height_override=640
 window/stretch/mode="viewport"
+window/handheld/orientation=1
 
 [gui]
 
@@ -68,6 +69,10 @@ pause={
 ]
 }
 
+[input_devices]
+
+sensors/enable_accelerometer=true
+
 [layer_names]
 
 2d_physics/layer_1="card_target_selector"
@@ -79,3 +84,4 @@ pause={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

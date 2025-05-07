@@ -12,6 +12,7 @@ const HOVER_STYLEBOX := preload("res://scenes/card_ui/card_hover_stylebox.tres")
 @export var char_stats: CharacterStats : set = _set_char_stats
 
 @onready var card_visuals: CardVisuals = $CardVisuals
+
 @onready var drop_point_detector: Area2D = $DropPointDetector
 @onready var card_state_machine: CardStateMachine = $CardStateMachine
 @onready var targets: Array[Node] = []
@@ -21,6 +22,7 @@ var parent: Control
 var tween: Tween
 var playable := true : set = _set_playable
 var disabled := true
+
 
 
 func _ready() -> void:
@@ -33,6 +35,12 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	card_state_machine.on_input(event)
+	
+	
+
+func animate_to_position(new_position: Vector2, duration: float) -> void:
+	tween = create_tween().set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "global_position", new_position, duration)
 
 
 func animate_to_position(new_position: Vector2, duration: float) -> void:

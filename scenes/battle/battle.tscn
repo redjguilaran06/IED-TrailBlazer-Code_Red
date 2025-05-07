@@ -26,6 +26,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyg5u"]
 size = Vector2(1080, 1554)
 
+
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_4s751")
 char_stats = ExtResource("4_fwb8a")
@@ -33,14 +34,16 @@ music = ExtResource("3_nuoky")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.321569, 0.321569, 0.321569, 1)
+
 texture = ExtResource("4_5moxy")
+
 centered = false
-metadata/_edit_lock_ = true
 
 [node name="CardDropArea" type="Area2D" parent="."]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea"]
+
 position = Vector2(540, 777)
 shape = SubResource("RectangleShape2D_xyg5u")
 debug_color = Color(0, 0.6, 0.701961, 0.117647)
@@ -70,6 +73,7 @@ stats = ExtResource("4_fwb8a")
 script = ExtResource("8_3di7i")
 player = NodePath("../Player")
 hand = NodePath("../BattleUI/Hand")
+
 
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
 script = ExtResource("7_18vit")
@@ -204,6 +208,7 @@ layer = 4
 unique_name_in_owner = true
 visible = false
 
+
 [node name="DiscardPileView" parent="CardPileViews" instance=ExtResource("21_rnul2")]
 unique_name_in_owner = true
 visible = false
@@ -213,3 +218,4 @@ layer = 4
 
 [node name="StatusView" parent="StatusViewLayer" instance=ExtResource("22_kfjwu")]
 visible = false
+

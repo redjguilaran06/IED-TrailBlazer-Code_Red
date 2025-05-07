@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Deck Builder Tutorial"
+
+config/name="TrailBlazer 2.0"
 config/tags=PackedStringArray("gamelab")
 run/main_scene="res://scenes/run/run.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
@@ -28,12 +29,14 @@ RNG="*res://global/rng.gd"
 
 gdscript/warnings/unused_signal=0
 
+
 [display]
 
 window/size/viewport_width=1080
 window/size/viewport_height=1920
 window/size/window_width_override=360
 window/size/window_height_override=640
+
 window/stretch/mode="viewport"
 
 [gui]
@@ -75,7 +78,8 @@ pause={
 2d_physics/layer_3="enemies"
 2d_physics/layer_4="map_rooms"
 
+
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)

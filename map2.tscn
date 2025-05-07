@@ -1,0 +1,146 @@
+[gd_scene load_steps=10 format=3 uid="uid://caf6b7eblkkl6"]
+
+[ext_resource type="Script" uid="uid://brsxoaacy6001" path="res://map2.gd" id="1_55y45"]
+[ext_resource type="Texture2D" uid="uid://cgn6f3udq71iv" path="res://664b7786-0dc1-4980-97d1-94ce3302abe4.jpg" id="2_nwr2e"]
+[ext_resource type="Texture2D" uid="uid://s811mb4trrt0" path="res://map-pin-user-fill.png" id="3_4f56f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wijl4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5pve"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0an3"]
+bg_color = Color(0.544974, 0.544974, 0.544974, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iw27f"]
+bg_color = Color(0.877149, 0, 0.20706, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71pa8"]
+bg_color = Color(0.201527, 0.201527, 0.201526, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urblq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="map" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_55y45")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1084.0
+offset_bottom = 1913.0
+texture = ExtResource("2_nwr2e")
+
+[node name="firstUser" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 1274.0
+offset_right = 393.0
+offset_bottom = 1382.0
+texture = ExtResource("3_4f56f")
+
+[node name="firstUserButton" type="Button" parent="firstUser"]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 108.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wijl4")
+
+[node name="secondUser" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 807.0
+offset_top = 798.0
+offset_right = 931.0
+offset_bottom = 906.0
+texture = ExtResource("3_4f56f")
+
+[node name="secondUserButton" type="Button" parent="secondUser"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 5.0
+offset_right = 119.0
+offset_bottom = 113.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wijl4")
+
+[node name="thirdUser" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 297.0
+offset_right = 544.0
+offset_bottom = 405.0
+texture = ExtResource("3_4f56f")
+
+[node name="thirdUserButton" type="Button" parent="thirdUser"]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 108.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_p5pve")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 921.0
+offset_right = 965.0
+offset_bottom = 1093.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e0an3")
+
+[node name="fight" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 38.0
+offset_right = 320.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_iw27f")
+text = "Fight"
+
+[node name="ignore" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 42.0
+offset_right = 715.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_71pa8")
+text = "Ignore
+"
+
+[node name="fourthUser" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 612.0
+offset_right = 517.0
+offset_bottom = 720.0
+texture = ExtResource("3_4f56f")
+
+[node name="fourthUserButtin" type="Button" parent="fourthUser"]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 108.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_urblq")
+
+[connection signal="pressed" from="firstUser/firstUserButton" to="." method="_on_first_user_button_pressed"]
+[connection signal="pressed" from="firstUser/firstUserButton" to="." method="_on_toggle_button_pressed"]
+[connection signal="pressed" from="secondUser/secondUserButton" to="." method="_on_toggle_button_pressed"]
+[connection signal="pressed" from="thirdUser/thirdUserButton" to="." method="_on_toggle_button_pressed"]
+[connection signal="pressed" from="Panel/fight" to="." method="_fight_pressed"]
+[connection signal="pressed" from="Panel/fight" to="." method="_on_fight_pressed"]
+[connection signal="pressed" from="Panel/ignore" to="." method="_close"]
+[connection signal="pressed" from="fourthUser/fourthUserButtin" to="." method="_on_toggle_button_pressed"]

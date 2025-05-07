@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=11 format=3 uid="uid://b60egpxyditoc"]
 
 [ext_resource type="Theme" uid="uid://c8cqncsqlplyu" path="res://main_theme.tres" id="1_yv4pj"]
@@ -15,12 +16,15 @@ size = Vector2(200, 240)
 
 [node name="CardUI" type="Control"]
 custom_minimum_size = Vector2(200, 240)
+
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+
 offset_right = -880.0
 offset_bottom = -1680.0
+
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_yv4pj")
@@ -45,8 +49,10 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
+
 position = Vector2(100, 120)
 shape = SubResource("RectangleShape2D_ly5x7")
+
 
 [node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_tqtyy")
@@ -68,7 +74,9 @@ script = ExtResource("7_k7cbr")
 state = 4
 
 [node name="CardAimingState" type="Node" parent="CardStateMachine"]
+
 script = ExtResource("8_ew01p")
+
 state = 3
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

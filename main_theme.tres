@@ -32,3 +32,4 @@ Button/styles/normal = ExtResource("1_cof14")
 Button/styles/pressed = SubResource("StyleBoxFlat_6ipyv")
 Panel/styles/panel = ExtResource("1_cof14")
 PanelContainer/styles/panel = ExtResource("1_cof14")
+

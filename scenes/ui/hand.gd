@@ -3,6 +3,7 @@ extends HBoxContainer
 
 const CARD_UI_SCENE := preload("res://scenes/card_ui/card_ui.tscn")
 
+
 @export var player: Player
 @export var char_stats: CharacterStats
 
@@ -31,6 +32,7 @@ func enable_hand() -> void:
 func disable_hand() -> void:
 	for card: CardUI in get_children():
 		card.disabled = true
+
 
 
 func _on_card_ui_reparent_requested(child: CardUI) -> void:

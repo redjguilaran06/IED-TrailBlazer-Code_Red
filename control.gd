@@ -57,9 +57,9 @@ func _on_button_button_down() -> void:
 
 			if stored_hash == entered_hash:
 				print("Login Success")
-				var err = get_tree().change_scene_to_file("res://tab.tscn")
+				var err = get_tree().change_scene_to_file("res://map.tscn")
 				if err != OK:
-					print("Failed to load tab.tscn: ", err)
+					print("Failed to load map.tscn: ", err)
 			else:
 				print("Login Unsuccessful - Wrong password")
 		else:
@@ -107,9 +107,9 @@ func _on_login_pressed():
 
 			if stored_hash == entered_hash:
 				print("Login Success")
-				var err = get_tree().change_scene_to_file("res://tab.tscn")
+				var err = get_tree().change_scene_to_file("res://map.tscn")
 				if err != OK:
-					print("Failed to load tab.tscn: ", err)
+					print("Failed to load map.tscn: ", err)
 			else:
 				print("Login Unsuccessful - Wrong password")
 	else:

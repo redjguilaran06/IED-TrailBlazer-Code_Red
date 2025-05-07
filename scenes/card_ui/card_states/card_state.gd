@@ -1,7 +1,7 @@
 class_name CardState
 extends Node
 
-enum State {BASE, CLICKED, DRAGGING, AIMING, RELEASED}
+enum State{BASE, CLICKED, DRAGGING, AIMING, RELEASED}
 
 signal transition_requested(from: CardState, to: State)
 
@@ -18,10 +18,6 @@ func exit() -> void:
 	pass
 
 
-func post_enter() -> void:
-	pass
-
-
 func on_input(_event: InputEvent) -> void:
 	pass
 
@@ -30,9 +26,9 @@ func on_gui_input(_event: InputEvent) -> void:
 	pass
 
 
-func on_mouse_entered() -> void:
+func on_mouse_entered() -> void: #change to screen tap
 	pass
 
 
-func on_mouse_exited() -> void:
+func on_mouse_exited() -> void: #also change to screen tap
 	pass

@@ -7,9 +7,9 @@ var current_state: CardState
 var states := {}
 
 
-func init(card: CardUI) -> void:
-	for child: CardState in get_children():
-		if child:
+func init(card: CardUI) ->void:
+	for child in get_children():
+		if child is CardState:
 			states[child.state] = child
 			child.transition_requested.connect(_on_transition_requested)
 			child.card_ui = card
@@ -29,12 +29,12 @@ func on_gui_input(event: InputEvent) -> void:
 		current_state.on_gui_input(event)
 
 
-func on_mouse_entered() -> void:
+func on_mouse_entered() -> void: #change to screen pressed
 	if current_state:
 		current_state.on_mouse_entered()
 
 
-func on_mouse_exited() -> void:
+func on_mouse_exited() -> void: #also change to screen pressed
 	if current_state:
 		current_state.on_mouse_exited()
 
@@ -42,7 +42,7 @@ func on_mouse_exited() -> void:
 func _on_transition_requested(from: CardState, to: CardState.State) -> void:
 	if from != current_state:
 		return
-		
+	
 	var new_state: CardState = states[to]
 	if not new_state:
 		return
@@ -52,4 +52,3 @@ func _on_transition_requested(from: CardState, to: CardState.State) -> void:
 	
 	new_state.enter()
 	current_state = new_state
-	new_state.post_enter()
